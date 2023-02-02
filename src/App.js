@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./scenes/login/Login";
 import Signup from "./scenes/signup/Signup";
 import Listflat from "./scenes/listaflat/Listflat";
+import GeoAPI from "./scenes/GeoAPI";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/listflat" element={<Listflat/>}/>
+                    <Route path='/geolocation' element={<GeoAPI/>}/>
                 </Routes>
                
                 

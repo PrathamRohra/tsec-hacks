@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
 import "./style.css";
 // import "./App.css"
-=======
+
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigate } from 'react-router-dom';
 
->>>>>>> e37e99c914b75039cdaa6ca6301336478e192551
 
 function Login() {
   const [email, setEmail] = useState('');
