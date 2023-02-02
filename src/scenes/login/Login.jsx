@@ -1,12 +1,25 @@
 import React, { useState } from 'react';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import { useNavigate } from 'react-router-dom';
+
 
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+
+  const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(`Email: ${email} Password: ${password}`);
+    
+    try {
+      await signInWithEmailAndPassword(auth, email, password);
+      navigate("/")
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (
