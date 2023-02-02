@@ -97,5 +97,5 @@ const Listflat = () => {
   )
 }
 
-export default Listflat
+export default Listflat;
 
