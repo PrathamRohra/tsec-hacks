@@ -1,44 +1,61 @@
 import React from 'react'
-import { useState } from 'react';
 import './listflat.css'
-
-
-const Listflat = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(`Email: ${email} Password: ${password}`);
-      };
-  
+const listflat = () => {
   return (
     <>
-   <div className="auth-form-container">
-    <form className="login-form" onSubmit={handleSubmit}>
-      <label>
-        Email:
-        <input
-          type="text"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </label>
-      <br />
-      <button className="link-btn" type="submit">Login</button>
-    </form>
-    </div> 
+    <div>
+      
+<form>
+    <form >
+<label htmlFor="email">Where is your flat located
+                <input type="text" placeholder="Where is your flat located" name="email" />
+                </label>
+                <label htmlFor="email">Rent
+                <input  placeholder="Rent Per Head"  />
+                </label>
+                </form>
+<form>
+<input type="file" name="file" id="file" class="myclass" />
+<label for="file">Choose a file</label>
+</form>
+  <label for="cars">Occupancy:</label>
+  <select >
     
+      <option>Shared</option>
+      <option >Single</option>
+    
+      <option value="mercedes">Any</option>
+      
+   
+  </select>
+ 
+</form>
+
+<form>
+
+  <label for="cars">Looking for:</label>
+  <select>
+   
+      <option value="volvo">Male</option>
+      <option value="saab">Female</option>
+   
+   
+      <option value="mercedes">Any</option>
+ </select>
+ 
+
+</form>
+    </div>
+
+    <form>
+    <label htmlFor="email">Contact number
+                <input type="text" placeholder="Phone number"  />
+</label>
+    </form>
+    <button>Submit</button>
     </>
   )
 }
 
-export default Listflat
+export default listflat
+
