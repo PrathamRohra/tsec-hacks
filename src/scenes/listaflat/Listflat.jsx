@@ -1,44 +1,87 @@
 import React from 'react'
-import { useState } from 'react';
 import './listflat.css'
-
-
-const Listflat = () => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        console.log(`Email: ${email} Password: ${password}`);
-      };
-  
+const listflat = () => {
   return (
     <>
-   <div className="auth-form-container">
-    <form className="login-form" onSubmit={handleSubmit}>
-      <label>
-        Email:
-        <input
-          type="text"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </label>
-      <br />
-      <button className="link-btn" type="submit">Login</button>
+    <div className='App'>
+        <div className="auth-form-container">
+      
+<form className="login-form">
+    <form >
+        <div className="calling">
+                <label htmlFor="email">Where is your flat located
+                <input className="my-input" type="text" placeholder="Where is your flat located" name="email" />
+                </label>
+        </div>
+       <div className="calling">
+                <label htmlFor="email">
+                    Rent
+                <input className="my-input"  placeholder="Rent Per Head"  />
+                </label>
+                </div>
+                <div className="calling">
+    <label htmlFor="email">Contact number
+                <input className="my-input" type="text" placeholder="Phone number"  />
+</label>
+    </div>
     </form>
-    </div> 
+<div>
+<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
+<label for="file">Choose a file</label>
+</div>
+<div>
+<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
+<label for="file">Choose a file</label>
+</div>
+<div>
+<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
+<label for="file">Choose a file</label>
+</div>
+<div>
+<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
+<label for="file">Choose a file</label>
+</div>
+ 
+ 
+</form>
+
+<div>
+<div className="occupancy-div">
+<label for="cars">Occupancy:</label>
+  <select className="occupancy-select"> 
+    
+      <option>Shared</option>
+      <option >Single</option>
+    
+      <option value="mercedes">Any</option>
+      
+   
+  </select >
+  </div>
+  <div>
+  <label for="cars">Looking for:</label>
+  <select className="occupancy-select">
+   
+      <option value="volvo">Male</option>
+      <option value="saab">Female</option>
+   
+   
+      <option value="mercedes">Any</option>
+ </select>
+ </div>
+ 
+
+</div>
+
+
+    
+    </div>
+    </div>
+
     
     </>
   )
 }
 
-export default Listflat
+export default listflat
+
