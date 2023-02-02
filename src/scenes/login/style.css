@@ -1,4 +1,4 @@
-/* .App {
+.App {
     text-align: center;
     display: flex;
     min-height: 100vh;
@@ -28,7 +28,7 @@
     padding: 0.25rem 0;
   }
   
-  input {
+  .login-input {
     margin: 0.5rem 0;
     padding: 1rem;
     border: none;
@@ -51,7 +51,7 @@
     color: white;
     text-decoration: underline;
   } */
-  /* .link-btn {
+  .link-btn {
     
   }
   .button-28 {
@@ -97,4 +97,4 @@
   .button-28:active {
     box-shadow: none;
     transform: translateY(0);
-  } */ 
+  }
