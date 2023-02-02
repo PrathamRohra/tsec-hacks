@@ -15,7 +15,7 @@ import { v4 } from 'uuid';
 // import Upload from './Upload'
 import Upload from './Upload'
 import Amenities from './Amenities'
-const ListfLat = () => {
+const Listflat = () => {
   const [loc, setLoc] = useState("");
   const [rent, setRent] = useState("");
   const [phone, setPhone] = useState("");

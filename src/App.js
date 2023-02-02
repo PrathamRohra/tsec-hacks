@@ -13,6 +13,7 @@ import Amenities from "./scenes/listaflat/Amenities";
 import { LocationContextProvider } from './Context/LocationContext';
 
 
+
 function App() {
     return (
         <div className="Apps">
@@ -30,7 +31,6 @@ function App() {
                     <Route path="/homePage" element={<HomePage/>}/>
                     
                     <Route path="/listflat" element={<Upload/>}/>
-                    <Route path="/Amenities" element={<Amenities/>}/>
 
                 </Routes>
 
