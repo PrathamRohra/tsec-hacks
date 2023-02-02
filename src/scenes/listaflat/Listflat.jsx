@@ -1,6 +1,9 @@
 import React from 'react'
 import './listflat.css'
-const listflat = () => {
+// import Upload from './Upload'
+import Upload from './Upload'
+import Amenities from './Amenities'
+const Listflat = () => {
   return (
     <>
     <div className='App'>
@@ -25,8 +28,12 @@ const listflat = () => {
 </label>
     </div>
     </form>
+
+{/* <input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
+<label for="file">Choose a file</label>
+</div>
 <div>
-<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
+<inputh className="login-input" type="file" multiple name="file" id="file" class="myclass" />
 <label for="file">Choose a file</label>
 </div>
 <div>
@@ -36,15 +43,22 @@ const listflat = () => {
 <div>
 <input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
 <label for="file">Choose a file</label>
-</div>
-<div>
-<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
-<label for="file">Choose a file</label>
-</div>
- 
+</div
+  */  }
+  <div className="new-contain">
+
+  <Upload/>
+  <Upload/>
+  </div>
+  <div className="new-contain">
+
+  <Upload/>
+  <Upload/>
+  </div>
+  
  
 </form>
-
+{/* <Amenities/> */}
 <div>
 <div className="occupancy-div">
 <label for="cars">Occupancy:</label>
@@ -83,5 +97,5 @@ const listflat = () => {
   )
 }
 
-export default listflat
+export default Listflat
 
