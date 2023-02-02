@@ -8,6 +8,8 @@ import Listflat from "./scenes/listaflat/Listflat";
 import GeoAPI from "./scenes/GeoAPI";
 
 import HomePage from "./scenes/Homepage/HomePage";
+import Upload from "./scenes/listaflat/Upload";
+import Amenities from "./scenes/listaflat/Amenities";
 import { LocationContextProvider } from './Context/LocationContext';
 
 
@@ -26,7 +28,9 @@ function App() {
                     <Route path='/geolocation' element={<GeoAPI/>}/>
 
                     <Route path="/homePage" element={<HomePage/>}/>
-
+                    
+                    <Route path="/listflat" element={<Upload/>}/>
+                    <Route path="/Amenities" element={<Amenities/>}/>
 
                 </Routes>
 

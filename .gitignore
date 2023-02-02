@@ -24,4 +24,8 @@ yarn-error.log*
 
 README.md
 .env.local
+
+.env
+
 Googlemapapi.js
+

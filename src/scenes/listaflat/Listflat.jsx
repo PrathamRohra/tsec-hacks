@@ -12,7 +12,10 @@ import { doc, addDoc, setDoc, updateDoc, collection } from "firebase/firestore";
 import { v4 } from 'uuid';
 
 
-const Listflat = () => {
+// import Upload from './Upload'
+import Upload from './Upload'
+import Amenities from './Amenities'
+const ListfLat = () => {
   const [loc, setLoc] = useState("");
   const [rent, setRent] = useState("");
   const [phone, setPhone] = useState("");
@@ -139,4 +142,5 @@ const Listflat = () => {
   );
 };
 
-export default Listflat;
+export default Listflat
+
