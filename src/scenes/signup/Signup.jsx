@@ -5,14 +5,14 @@ import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 import GeoAPI from '../GeoAPI';
 
-function Signup() {
 
+function Signup() {
+    const [loc, setLoc] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [date, setDOB] = useState('');
     const [gender, setGender] = useState('Choose...');
-    const [location, setLocation] = useState('')
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -27,6 +27,7 @@ function Signup() {
           password,
           date,
           gender,
+          loc,
         });
 
         navigate('/login');
@@ -87,7 +88,13 @@ function Signup() {
         </select>
       </label>
       <br />
-      <GeoAPI/>
+      <input
+          type="text"
+          value={loc}
+          placeholder="Enter your City"
+          onChange={(event) => setLoc(event.target.value)}
+        />
+      {/* <GeoAPI/> */}
       <button type="submit">Sign Up</button>
 
     </form>

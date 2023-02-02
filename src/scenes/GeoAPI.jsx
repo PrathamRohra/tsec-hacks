@@ -15,9 +15,10 @@ import "@reach/combobox/styles.css";
 import { db } from "../firebase";
 import { API_KEY } from "./Googlemapapi";
 
-
+ 
 export default function GeoAPI() {
     
+    // const [locationData, setLocationData] = useState({});
     const { isLoaded } = useLoadScript({
       googleMapsApiKey: API_KEY,
       libraries: ["places"],
@@ -66,11 +67,12 @@ export default function GeoAPI() {
       setSelected({ lat, lng });
       console.log(results);
       console.log(lat, lng);
+      
     };
-    
+   
 
     return (
-        <form>
+    <form>
       <Combobox onSelect={handleSelect} >
         <ComboboxInput
           value={value}
@@ -92,3 +94,5 @@ export default function GeoAPI() {
     </form>
     );
   };
+
+  

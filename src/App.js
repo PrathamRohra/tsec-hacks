@@ -8,6 +8,7 @@ import Listflat from "./scenes/listaflat/Listflat";
 import GeoAPI from "./scenes/GeoAPI";
 
 import HomePage from "./scenes/Homepage/HomePage";
+import { LocationContextProvider } from './Context/LocationContext';
 
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path="/login" element={<Login />} />
+
                     <Route path="/signup" element={<Signup />} />
+
 
                     <Route path="/listflat" element={<Listflat/>}/>
 
