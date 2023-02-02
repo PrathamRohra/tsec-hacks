@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
-
+import GeoAPI from '../GeoAPI';
 
 function Signup() {
 
@@ -12,6 +12,7 @@ function Signup() {
     const [password, setPassword] = useState('');
     const [date, setDOB] = useState('');
     const [gender, setGender] = useState('Choose...');
+    const [location, setLocation] = useState('')
     const navigate = useNavigate();
 
     const handleSubmit = async (event) => {
@@ -29,7 +30,6 @@ function Signup() {
         });
 
         navigate('/login');
-
 
       }catch(err){
           console.log(err);
@@ -87,7 +87,9 @@ function Signup() {
         </select>
       </label>
       <br />
+      <GeoAPI/>
       <button type="submit">Sign Up</button>
+
     </form>
   );
 }
