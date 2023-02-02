@@ -6,14 +6,13 @@ import { getFirestore } from "firebase/firestore";
 
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MSG_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID
-};
-
+    apiKey: "AIzaSyArI4E4eeHlxevx0ZgSeQpRxwbXP2HmniU",
+    authDomain: "tsec-hacks-6e88b.firebaseapp.com",
+    projectId: "tsec-hacks-6e88b",
+    storageBucket: "tsec-hacks-6e88b.appspot.com",
+    messagingSenderId: "571372438189",
+    appId: "1:571372438189:web:d0620515d4f045833cfc24"
+  };
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
