@@ -88,15 +88,12 @@ function Signup() {
         </select>
       </label>
       <br />
-<<<<<<< HEAD
-=======
       <input
           type="text"
           value={loc}
           placeholder="Enter your City"
           onChange={(event) => setLoc(event.target.value)}
-        />
->>>>>>> e6c2be09905abe951a476c620ad3c5f0a5eeaf11
+        /> e6c2be09905abe951a476c620ad3c5f0a5eeaf11
       {/* <GeoAPI/> */}
       <button type="submit">Sign Up</button>
 
