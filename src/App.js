@@ -5,11 +5,11 @@ import Signup from "./scenes/signup/Signup";
 
 import Listflat from "./scenes/listaflat/Listflat";
 
-import GeoAPI from "./scenes/GeoAPI";
+
 
 import HomePage from "./scenes/Homepage/HomePage";
 import Upload from "./scenes/listaflat/Upload";
-import Amenities from "./scenes/listaflat/Amenities";
+
 
 
 function App() {
@@ -22,12 +22,12 @@ function App() {
 
                     <Route path="/listflat" element={<Listflat/>}/>
 
-                    <Route path='/geolocation' element={<GeoAPI/>}/>
+                  
 
                     <Route path="/homePage" element={<HomePage/>}/>
                     
                     <Route path="/listflat" element={<Upload/>}/>
-                    <Route path="/Amenities" element={<Amenities/>}/>
+                   
 
                 </Routes>
 

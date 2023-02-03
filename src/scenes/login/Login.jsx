@@ -50,7 +50,7 @@ function Login() {
       <button className="link-btn" type="submit">Login</button>
     </form>
     </div> */}
-    <div className='App'>
+    <div className='App' style={{backgroundColor :"#B1D182"}}>
     <div className="auth-form-container">
             <h2>Login</h2>
             <form className="login-form" onSubmit={handleSubmit}>
