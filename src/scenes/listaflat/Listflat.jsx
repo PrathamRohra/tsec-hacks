@@ -1,92 +1,141 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./listflat.css";
-// import Upload from './Upload'
-import Upload from "./Upload";
+import { useState } from "react";
+import { db, storage } from "../../firebase";
+import {
+  ref,
+  uploadBytes,
+  getDownloadURL,
+  uploadBytesResumable,
+} from "firebase/storage";
+import { doc, addDoc, setDoc, updateDoc, collection } from "firebase/firestore";
+import { v4 } from 'uuid';
 
+
+// import Upload from './Upload'
+import Upload from './Upload'
+import Amenities from './Amenities'
 const Listflat = () => {
+  const [loc, setLoc] = useState("");
+  const [rent, setRent] = useState("");
+  const [phone, setPhone] = useState("");
+  const [occupancy, setOccupancy] = useState("");
+  const [gender, setGender] = useState("Choose...");
+//   const [url, setUrl] = useState("");
+  const date = new Date().getTime();
+//   const storageRef = ref(storage, `${date}`); 
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+    
+    const file = e.target[3].files[0];
+    console.log(file);
+    let url;
+    try {
+        const id = v4();
+        const storageRef = ref(storage, `flat-${id}`);
+          await uploadBytes(storageRef, file).then(()=>{
+          getDownloadURL(storageRef).then(async (downloadUrl)=>{
+
+            await addDoc(collection(db, "flats"), {
+                loc,
+                rent,
+                phone,
+                file: downloadUrl,
+                occupancy,
+                gender,
+              });
+
+          });
+        }); 
+  
+      
+      
+    } 
+    catch (err) {
+      console.log(err);
+    }
+  }
+
   return (
     <>
       <div className="App">
         <div className="auth-form-container">
-          <h1>Your Details</h1>
-          <form className="login-form">
-            <form>
-              <div className="calling">
-                <label htmlFor="email">
-                  Where is your flat located
-                  <input
-                    className="my-input"
-                    type="text"
-                    placeholder="Where is your flat located"
-                    name="email"
-                  />
-                </label>
-              </div>
-              <div className="calling">
-                <label htmlFor="email">
-                  Rent
-                  <input className="my-input" placeholder="Rent Per Head" />
-                </label>
-              </div>
-              <div className="calling">
-                <label htmlFor="email">
-                  Contact number
-                  <input
-                    className="my-input"
-                    type="text"
-                    placeholder="Phone number"
-                  />
-                </label>
-              </div>
-            </form>
-
-            {/* <input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
-<label for="file">Choose a file</label>
-</div>
-<div>
-<inputh className="login-input" type="file" multiple name="file" id="file" class="myclass" />
-<label for="file">Choose a file</label>
-</div>
-<div>
-<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
-<label for="file">Choose a file</label>
-</div>
-<div>
-<input className="login-input" type="file" multiple name="file" id="file" class="myclass" />
-<label for="file">Choose a file</label>
-</div
-  */}
-            <div className="new-contain">
-              <Upload />
-              <Upload />
+          <form className="login-form" onSubmit={handleSubmit}>
+            <div className="calling">
+              <label>
+                Where is your flat located
+                <input
+                  className="my-input"
+                  type="text"
+                  placeholder="Enter your flat's city"
+                  value={loc}
+                  onChange={(e) => setLoc(e.target.value)}
+                />
+              </label>
             </div>
-            <div className="new-contain">
-              <Upload />
-              <Upload />
+            <div className="calling">
+              <label>
+                Rent
+                <input
+                  className="my-input"
+                  placeholder="Rent Per Head"
+                  value={rent}
+                  onChange={(e) => setRent(e.target.value)}
+                />
+              </label>
             </div>
-          </form>
-          {/* <Amenities/> */}
-          <div>
-            <div className="occupancy-div">
-              <label for="cars">Occupancy:</label>
-              <select className="occupancy-select">
-                <option>Shared</option>
-                <option>Single</option>
+            <div className="calling">
+              <label>
+                Contact number
+                <input
+                  className="my-input"
+                  type="text"
+                  placeholder="Phone number"
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </label>
+            </div>
 
-                <option value="mercedes">Any</option>
-              </select>
+            <div>
+              <input
+                className="login-input"
+                type="file"
+                multiple
+                name="file"
+                id="file"
+              />
+              <label>Choose a file</label>
             </div>
             <div>
-              <label for="cars">Looking for:</label>
-              <select className="occupancy-select">
-                <option value="volvo">Male</option>
-                <option value="saab">Female</option>
+              <div className="occupancy-div">
+                <label>Occupancy: </label>
+                <select
+                  className="occupancy-select"
+                  onChange={(e) => setOccupancy(e.target.value)}
+                >
+                  <option>Shared</option>
+                  <option>Single</option>
 
-                <option value="mercedes">Any</option>
-              </select>
+                  <option value="mercedes">Any</option>
+                </select>
+              </div>
+              <div>
+                <label>Gender Specific: </label>
+                <select
+                  className="occupancy-select"
+                  value={gender}
+                  onChange={(e) => setGender(e.target.value)}
+                >
+                  <option value="volvo">Male</option>
+                  <option value="saab">Female</option>
+                  <option value="mercedes">Any</option>
+                </select>
+              </div>
             </div>
             <button className="button-28">Submit</button>
-          </div>
+          </form>
         </div>
       </div>
     </>
@@ -94,3 +143,4 @@ const Listflat = () => {
 };
 
 export default Listflat;
+
