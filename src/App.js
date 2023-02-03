@@ -12,7 +12,7 @@ import Upload from "./scenes/listaflat/Upload";
 import Amenities from "./scenes/listaflat/Amenities";
 import { LocationContextProvider } from './Context/LocationContext';
 
-
+import Tweets from "./components/Tweets/Tweets";
 
 function App() {
     return (
@@ -29,8 +29,10 @@ function App() {
                     <Route path='/geolocation' element={<GeoAPI/>}/>
 
                     <Route path="/homePage" element={<HomePage/>}/>
-                    
+
                     <Route path="/listflat" element={<Upload/>}/>
+
+                    <Route path="/tweets" element={<Tweets/>}/>
 
                 </Routes>
 

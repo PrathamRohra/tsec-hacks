@@ -3,7 +3,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
-import GeoAPI from '../GeoAPI';
+// import GeoAPI from '../GeoAPI';
 
 
 function Signup() {
