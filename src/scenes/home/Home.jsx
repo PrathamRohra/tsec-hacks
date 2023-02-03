@@ -5,6 +5,7 @@ import Header from "../../components/header_LP/Header";
 import MailList from "../../components/mailList/MailList";
 import Navbar from "../../components/navbar/Navbar";
 import PropertyList from "../../components/propertyList/PropertyList";
+import Reels from "../../components/Reels/Reels";
 import "./home.css";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <MailList/>
         <Footer/>
       </div>
+      <Reels/>
     </div>
   );
 };
