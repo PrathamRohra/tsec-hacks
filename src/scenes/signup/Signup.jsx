@@ -4,6 +4,7 @@ import { auth, db } from "../../firebase";
 import { doc, setDoc } from "firebase/firestore";
 import { useNavigate, Link } from "react-router-dom";
 // import GeoAPI from '../GeoAPI';
+import './signup.css'
 
 function Signup() {
   const [loc, setLoc] = useState("");
