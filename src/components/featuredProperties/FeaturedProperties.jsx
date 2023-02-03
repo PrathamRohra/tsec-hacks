@@ -24,7 +24,7 @@ const FeaturedProperties = () => {
           className="fpImg"
         />
         <span className="fpName">Comfort Suites Airport</span>
-        <span className="fpCity">Austin</span>
+        <span className="fpCity">Delhi</span>
         <span className="fpPrice">Starting from $140</span>
         <div className="fpRating">
           <button>9.3</button>
@@ -33,12 +33,12 @@ const FeaturedProperties = () => {
       </div>
       <div className="fpItem">
         <img
-          src="https://cf.bstatic.com/xdata/images/hotel/max1280x900/232902339.jpg?k=3947def526b8af0429568b44f9716e79667d640842c48de5e66fd2a8b776accd&o=&hp=1"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Mumbai_Aug_2018_%2843397784544%29.jpg/1200px-Mumbai_Aug_2018_%2843397784544%29.jpg"
           alt=""
           className="fpImg"
         />
         <span className="fpName">Four Seasons Hotel</span>
-        <span className="fpCity">Lisbon</span>
+        <span className="fpCity">Mumbai</span>
         <span className="fpPrice">Starting from $99</span>
         <div className="fpRating">
           <button>8.8</button>
@@ -52,7 +52,7 @@ const FeaturedProperties = () => {
           className="fpImg"
         />
         <span className="fpName">Hilton Garden Inn</span>
-        <span className="fpCity">Berlin</span>
+        <span className="fpCity">Bangalore</span>
         <span className="fpPrice">Starting from $105</span>
         <div className="fpRating">
           <button>8.9</button>
