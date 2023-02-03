@@ -1,0 +1,21 @@
+.tweet-container{
+   height: 70vh;
+   width: 85vh;
+   border: 1px solid black;
+}
+
+.swiper-tweet{
+   padding-top: 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   justify-content: center;
+   align-items: center;
+}
+
+.tweet img{
+   width: 80vh;
+   height: 55vh;
+   padding: 1vh 1vh 1vh 3vh;
+}
+

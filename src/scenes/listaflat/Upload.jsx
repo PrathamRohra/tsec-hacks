@@ -34,9 +34,9 @@ const Upload = () => {
         <p>Image size must be less than <span>2MB</span></p>
         {image && <img src={image} alt={imageName} />}
       </div>
-      <button className="select-image" onClick={() => document.querySelector('#file').click()}>
+      {/* <button className="select-image" onClick={() => document.querySelector('#file').click()}>
         Select Image
-      </button>
+      </button> */}
     </div>
   );
 };
