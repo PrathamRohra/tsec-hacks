@@ -21,37 +21,37 @@ const Listflat = () => {
   const [phone, setPhone] = useState("");
   const [occupancy, setOccupancy] = useState("");
   const [gender, setGender] = useState("Choose...");
-//   const [url, setUrl] = useState("");
+  //   const [url, setUrl] = useState("");
   const date = new Date().getTime();
-//   const storageRef = ref(storage, `${date}`); 
+  //   const storageRef = ref(storage, `${date}`); 
 
   async function handleSubmit(e) {
     e.preventDefault();
-    
+
     const file = e.target[3].files[0];
     console.log(file);
     let url;
     try {
-        const id = v4();
-        const storageRef = ref(storage, `flat-${id}`);
-          await uploadBytes(storageRef, file).then(()=>{
-          getDownloadURL(storageRef).then(async (downloadUrl)=>{
+      const id = v4();
+      const storageRef = ref(storage, `flat-${id}`);
+      await uploadBytes(storageRef, file).then(() => {
+        getDownloadURL(storageRef).then(async (downloadUrl) => {
 
-            await addDoc(collection(db, "flats"), {
-                loc,
-                rent,
-                phone,
-                file: downloadUrl,
-                occupancy,
-                gender,
-              });
-
+          await addDoc(collection(db, "flats"), {
+            loc,
+            rent,
+            phone,
+            file: downloadUrl,
+            occupancy,
+            gender,
           });
-        }); 
-  
-      
-      
-    } 
+
+        });
+      });
+
+
+
+    }
     catch (err) {
       console.log(err);
     }

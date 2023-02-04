@@ -4,13 +4,8 @@ import Login from "./scenes/login/Login";
 import Signup from "./scenes/signup/Signup";
 
 import Listflat from "./scenes/listaflat/Listflat";
+import LandingPage from "./scenes/Landing Page/Landingpage";
 
-
-
-
-
-import HomePage from "./scenes/Homepage/HomePage";
-import Upload from "./scenes/listaflat/Upload";
 import Home from "./scenes/home/Home";
 import Hotel from "./scenes/hotel/Hotel";
 import List from "./scenes/list/List";
@@ -23,30 +18,19 @@ function App() {
         <div className="Apps">
             <BrowserRouter>
                 <Routes>
+                    <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/listflat" element={<Listflat />} />
 
-                   
-
-                    
-
                     {/* <Route path="/geolocation" element={<GeoAPI />} /> */}
 
-                    {/* <Route path="/homePage" element={<HomePage />} /> */}
+                    <Route path="/landingPage" element={<LandingPage />} />
 
-                    {/* <Route path="/homePage" element={<HomePage />} /> */}
-                    {/* <Route path="/listflat" element={<Upload />} /> */}
-
-                    <Route path="/homePage" element={<HomePage />} />
-
-                    
+                    <Route path="/home" element={<Home />} />
 
                     <Route path="/tweets" element={<Tweets />} />
 
-                    
-                 
-                    <Route path="/" element={<Home />} />
                     <Route path="/hotels" element={<List />} />
                     <Route path="/hotels/:id" element={<Hotel />} />
                 </Routes>
