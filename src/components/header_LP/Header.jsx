@@ -1,7 +1,10 @@
 import {
   faBed,
   faCalendarDays,
+  faCamera,
   faCar,
+  faCheck,
+  faMoneyBill,
   faPerson,
   faPlane,
   faTaxi,
@@ -56,25 +59,22 @@ const Header = ({ type }) => {
       >
         <div className="headerList">
           <div className="headerListItem active">
-            <FontAwesomeIcon icon={faBed} />
-            <span>Stays</span>
+            <FontAwesomeIcon icon={faCheck} />
+            <span>Verified</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faPlane} />
-            <span>Flights</span>
-          </div>
-          <div className="headerListItem">
-            <FontAwesomeIcon icon={faCar} />
-            <span>Car rentals</span>
+            <FontAwesomeIcon icon={faMoneyBill} />
+            <span>Price </span>
           </div>
           <div className="headerListItem">
             <FontAwesomeIcon icon={faBed} />
-            <span>Attractions</span>
+            <span>BHK</span>
           </div>
           <div className="headerListItem">
-            <FontAwesomeIcon icon={faTaxi} />
-            <span>Airport taxis</span>
+            <FontAwesomeIcon icon={faCamera} />
+            <span>Shorts</span>
           </div>
+         
         </div>
         {type !== "list" && (
           <>

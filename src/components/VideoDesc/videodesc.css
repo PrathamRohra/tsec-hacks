@@ -1,5 +1,7 @@
 .video-text {
   position: absolute;
+  display: flex;
+  flex-direction: column;
   bottom: 13%;
   color: #fff;
   display: flex;
@@ -8,6 +10,15 @@
 
 .video-text > h3 {
   margin-left: 20px;
+  margin-top: 4px;
+}
+
+.video-text.links{
+  color: blueviolet;
+}
+
+.video-text a{
+  text-decoration: none;
 }
 
 .video-desc-buttons {
@@ -27,5 +38,5 @@
 
 .video-span{
   padding-left: 0.5rem;
-  font-weight: 500;
+  font-weight: 500;
 }

@@ -27,24 +27,24 @@ function App() {
                     <Route path="/signup" element={<Signup />} />
                     <Route path="/listflat" element={<Listflat />} />
 
-                    <Route path="/listflat" element={<Listflat />} />
+                   
 
-                    <Route path="/listflat" element={<Listflat />} />
+                    
 
                     {/* <Route path="/geolocation" element={<GeoAPI />} /> */}
 
-                    <Route path="/homePage" element={<HomePage />} />
+                    {/* <Route path="/homePage" element={<HomePage />} /> */}
+
+                    {/* <Route path="/homePage" element={<HomePage />} /> */}
+                    {/* <Route path="/listflat" element={<Upload />} /> */}
 
                     <Route path="/homePage" element={<HomePage />} />
-                    <Route path="/listflat" element={<Upload />} />
 
-                    <Route path="/homePage" element={<HomePage />} />
-
-                    <Route path="/listflat" element={<Upload />} />
+                    
 
                     <Route path="/tweets" element={<Tweets />} />
 
-                    <Route path="/listflat" element={<Upload />} />
+                    
                  
                     <Route path="/" element={<Home />} />
                     <Route path="/hotels" element={<List />} />

@@ -99,67 +99,7 @@ function Signup() {
             </label>
             <br />
 
-            <input
-              type="text"
-              value={loc}
-              placeholder="Enter your City"
-              onChange={(event) => setLoc(event.target.value)}
-            />
-          <label>
-        Name:
-        <input
-          type="text"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-        />
-      </label>
-      <label>
-        Email:
-        <input
-          type="email"
-          value={email}
-          onChange={(event) => setEmail(event.target.value)}
-        />
-      </label>
-      <br />
-      <label>
-        Password:
-        <input
-          type="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-        />
-      </label>
-          <br />
-           <br />
-      <label>
-        DOB
-        <input
-          type="date"
-          value={date}
-          onChange={(event) => setDOB(event.target.value)}
-        />
-          </label>
-           <label>
-        Gender
-         <select value={gender} onChange={(event) => setGender(event.target.value)}>
-          <option value="Choose..." disabled>Choose...</option>
-          <option value="Male">Male</option>
-          <option value="Female">Female</option>
-          <option value="Other">Other</option>
-          <option value="Prefer Not to say">Prefer Not to Say</option>
-        </select>
-      </label>
-      <br />
-      <input
-          type="text"
-          value={loc}
-          placeholder="Enter your City"
-          onChange={(event) => setLoc(event.target.value)}
-        /> e6c2be09905abe951a476c620ad3c5f0a5eeaf11
-      {/* <GeoAPI/> */}
-      <button type="submit">Sign Up</button>
-
+           
             <button className="button-sign" type="submit">
               Sign Up
             </button>

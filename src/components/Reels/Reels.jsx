@@ -1,6 +1,6 @@
 import React from "react";
 import Video from "../Video/Video";
-// import Logo from "../../img/icon.png";
+import Logo from "../navbar/logo.png";
 
 import "./reels.css";
 
@@ -40,7 +40,7 @@ function Reels() {
       <div className="Reels">
          <center>
             <div className="reels-logo">
-               <img alt="logo" src="https.//" className="reel-logo" />
+               <img alt="logo" src={Logo} className="reel-logo" />
             </div>
             <h3>Feeds</h3>
             <div className="video-container" id="video-container">
