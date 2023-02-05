@@ -35,7 +35,7 @@ export default function Video({ channel, song, url, likes, comment, shares }) {
     <div className="video-cards">
       <div className="video-header">
         {/* <ArrowBackIosIcon /> */}
-        <h3>Reel</h3>
+        <h3>Shorts</h3>
         {/* <CameraAltIcon /> */}
       </div>
       <video

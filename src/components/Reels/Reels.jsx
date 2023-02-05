@@ -42,7 +42,7 @@ function Reels() {
             <div className="reels-logo">
                <img alt="logo" src={Logo} className="reel-logo" />
             </div>
-            <h3>Feeds</h3>
+            <h2 className="reel-title">Feeds</h2>
             <div className="video-container" id="video-container">
 
                {data.map((props, index) => (

@@ -2,13 +2,15 @@
    display: grid;
    place-items: center;
    height: 100vh;
-   background-color: rgb(26, 25, 25);
    color: #fff;
 }
 
 .reel-logo {
-   width: 20%;
-   max-width: 200px;
+   position: absolute;
+   width: 10%;
+   max-width: 100px;
+   top: 1rem;
+   left: 1rem;
 }
 
 .video-container {
@@ -21,6 +23,10 @@
    overflow: scroll;
    scroll-snap-type: y mandatory;
    scrollbar-width: none;
+}
+
+.reel-title{
+   margin-bottom: 2rem;
 }
 
 .video-container::-webkit-scrollbar {
