@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./scenes/login/Login";
 import Signup from "./scenes/signup/Signup";
-
+import Shorts from "./components/Reels/Reels"
 import Listflat from "./scenes/listaflat/Listflat";
 import LandingPage from "./scenes/Landing Page/Landingpage";
 
@@ -31,6 +31,7 @@ function App() {
                     <Route path="/home" element={<Home />} />
 
                     <Route path="/tweets" element={<Tweets />} />
+                    <Route path="/shorts" element={<Shorts />} />
 
                     <Route path="/hotels" element={<List />} />
                     <Route path="/hotels/:id" element={<Hotel />} />

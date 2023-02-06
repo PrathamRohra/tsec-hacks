@@ -13,7 +13,7 @@ const Navbar = () => {
         <span className="logo"><img src={Logo} alt="" srcset="" style={{
           height: '35px'}} /></span>
         {!currentUser && <div className="navItems">
-          <Link to="/register"><button className="navButton">Register</button></Link>
+          <Link to="/signup"><button className="navButton">Signup</button></Link>
           <Link to="/login"><button className="navButton">Login</button></Link>
         </div>}
         {currentUser && 
