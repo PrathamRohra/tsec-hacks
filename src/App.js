@@ -12,6 +12,7 @@ import List from "./scenes/list/List";
 
 import { LocationContextProvider } from "./Context/LocationContext";
 import Tweets from "./components/Tweets/Tweets";
+import Profile from "./scenes/profile/Profile";
 
 function App() {
     return (
@@ -33,6 +34,7 @@ function App() {
 
                     <Route path="/hotels" element={<List />} />
                     <Route path="/hotels/:id" element={<Hotel />} />
+                    <Route path="/Profile" element={<Profile />} />
                 </Routes>
             </BrowserRouter>
         </div>
