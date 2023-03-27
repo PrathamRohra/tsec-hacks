@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./scenes/login/Login";
 import Signup from "./scenes/signup/Signup";
-import Shorts from "./components/Reels/Reels"
+import Shorts from "./components/Reels/Reels";
 import Listflat from "./scenes/listaflat/Listflat";
 import LandingPage from "./scenes/Landing Page/Landingpage";
 
@@ -12,7 +12,8 @@ import List from "./scenes/list/List";
 
 import { LocationContextProvider } from "./Context/LocationContext";
 import Tweets from "./components/Tweets/Tweets";
-import Profile from "./scenes/profile/Profile";
+
+import Quiz from "./scenes/quiz/Quiz";
 
 function App() {
     return (
@@ -35,7 +36,8 @@ function App() {
 
                     <Route path="/hotels" element={<List />} />
                     <Route path="/hotels/:id" element={<Hotel />} />
-                    <Route path="/Profile" element={<Profile />} />
+
+                    <Route path="/quiz" element={<Quiz />} />
                 </Routes>
             </BrowserRouter>
         </div>

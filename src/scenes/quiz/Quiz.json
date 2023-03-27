@@ -1,0 +1,31 @@
+{
+       "users": [
+              {
+                     "name": "Sarah",
+                     "petPreference": "Not a pet person",
+                     "hygienePreference": "Looking for Hygienic Partner",
+                     "personalityTraits": [
+                            "Adventurous and outdoorsy",
+                            "friendly and outgoing"
+                     ]
+              },
+              {
+                     "name": "John",
+                     "petPreference": "Pet friendly, but only well behaved",
+                     "hygienePreference": "Need a roomie to give personal space",
+                     "personalityTraits": [
+                            "Ambivert",
+                            "avid reader"
+                     ]
+              },
+              {
+                     "name": "Emma",
+                     "petPreference": "Pet lover",
+                     "hygienePreference": "Looking for Hygienic Partner",
+                     "personalityTraits": [
+                            "Introvert",
+                            "panda-soul"
+                     ]
+              }
+       ]
+}
